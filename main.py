@@ -18,10 +18,10 @@ def main():
     sc = SparkContext(conf=conf)
 
     # VISUALIZATION SETTINGS
-    printInConsole = True
+    printInConsole = False
 
     # CREATING POINTS RDD
-    points = sc.textFile('data-sets\data.csv', minPartitions=8)
+    points = sc.textFile('data-sets\data100k.csv', minPartitions=8)
     header = points.first()
     points = points.filter(lambda row: row != header)
     points = points.map(lambda x: x.split(",")[0:2])
