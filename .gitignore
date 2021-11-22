@@ -1,5 +1,5 @@
 .pytest_cache
 .vscode
+.venv
 __pycache__
-todo.txt
-/tests/
+tests
